@@ -102,11 +102,12 @@ public class RNSshClientModule extends ReactContextBaseJavaModule {
 
           Session session = jsch.getSession(username, host, port);
 
-          if (password != null)
-            session.setPassword(password);
-
           Properties properties = new Properties();
           properties.setProperty("StrictHostKeyChecking", "no");
+          if (password != null) {
+            session.setPassword(password);
+            properties.setProperty("PreferredAuthentications", "password");
+          }
           session.setConfig(properties);
           session.connect();
 
