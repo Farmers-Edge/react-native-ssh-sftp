@@ -32,8 +32,7 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile 'com.jcraft:jsch:0.1.54'
+    compile 'com.jcraft:jsch:0.1.55'
     compile 'com.fasterxml.jackson.core:jackson-core:2.9.0'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.0'
 }
-  
